@@ -19,9 +19,13 @@ body {
   min-width: 100vh;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--clr-brussian-blue);
+}
+h1 {
+  color: var(--clr-selective-yellow);
 }
 .main-image-container {
   width: 40rem;
