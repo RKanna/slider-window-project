@@ -26,20 +26,28 @@ body {
 .main-image-container {
   width: 50rem;
   height: 30rem;
-  object-fit: contain;
+  overflow: hidden;
 }
 .main-image-container .img-container {
   display: flex;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  
 }
+
 .img-container img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   border: 5px solid white;
   border-radius: 1rem;
+}
+.img-container {
+  width: calc(100% * 7);
+}
+.img-container img {
+  /* width: calc(100% /7); */
 }
 .slider-main-container {
   max-width: 60rem;
@@ -65,6 +73,9 @@ body {
   font-size: 1rem;
   top :50%;
   transform: translateY(-50%);
+  transition: all 0.5s linear;
+  z-index: 100;
+  cursor: pointer;
 }
 i#previous {
 
@@ -72,4 +83,7 @@ i#previous {
 }
 i#next {
   right: 1.5rem;
+}
+i.button:active {
+  transform: scale(0.94) translateY(-50%);
 }
